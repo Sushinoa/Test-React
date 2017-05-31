@@ -11,7 +11,7 @@ import { Link }   from 'react-router-dom';
 class getPageUsers extends Component {
   componentWillMount() {
     console.log(this.props.location.pathname)
-    this.props.getPage('http://o96478l3.beget.tech/api/v1'+this.props.location.pathname);
+    this.props.getPage('http://o96478l3.beget.tech/api/v1/users?page=2');
   }
   render() {
 
@@ -25,7 +25,7 @@ class getPageUsers extends Component {
             <div>{user.name}</div>
             <div>{user.email}</div>
 
-            <Link to={'/users?'+ user.id}>Просмотр {user.id}</Link>
+            <Link to={'/users/'+ user.id}>Просмотр {user.id}</Link>
           </div>
         })}
       </div>

@@ -10,7 +10,8 @@ export default store => next => action => {
   .then((response)=>{
     next({
       type: 'SAVE_PAGE_USERS',
-      payload: response.data
+      payload: response.data,
+      headers:response.headers
     })
   })
   .catch((error)=>{

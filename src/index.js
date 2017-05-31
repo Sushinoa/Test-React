@@ -28,8 +28,7 @@ ReactDOM.render(
                 <Route exact path="/" component={App}/>
                 <Route path="/users/" component={Users}/>
                 <Route exact path="/users" component={AllUsers}/>
-                <Route exact path="/users/:id" component={getUser}/>
-                <Route  path="/page" component={getPageUsers}/>
+                <Route  path="/users/:id" component={getUser}/>
                 <Route path="/add_user" component={addUser}/>
             </div>
         </BrowserRouter>

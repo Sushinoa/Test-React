@@ -3,6 +3,7 @@
  */
 const initialState = {
   list:[],
+  headers:[],
   errors:[]
 };
 
@@ -10,7 +11,7 @@ export default function getPage(state = initialState, action){
   switch (action.type){
     case 'SAVE_PAGE_USERS':
       return{
-        ...state, list: action.payload
+        ...state, list: action.payload, headers: action.headers
       };
     case 'SAVE_ERRORS':
       return{

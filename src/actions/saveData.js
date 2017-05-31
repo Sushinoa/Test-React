@@ -1,8 +1,9 @@
 
-export function saveUsers(List) {
+export function saveUsers(List, Headers) {
 
     return {
         type: 'SAVE_USERS',
-        payload: List
+        payload: List,
+        headers:Headers
     }
 }
